@@ -9,6 +9,32 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const Rootpage(),
+    );
+  }
+}
+
+class Rootpage extends StatefulWidget {
+  const Rootpage({super.key});
+
+  @override
+  State<Rootpage> createState() => _RootpageState();
+}
+
+class _RootpageState extends State<Rootpage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Flutter')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint('Floating action Button');
+        },
+        child: const Icon(Icons.abc),
+      ),
+    );
   }
 }
