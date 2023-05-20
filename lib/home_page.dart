@@ -12,7 +12,7 @@ class Homepage extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (BuildContext context) {
-                return LearnFlutterPage();
+                return const LearnFlutterPage();
               },
             ),
           );

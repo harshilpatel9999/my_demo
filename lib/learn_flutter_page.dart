@@ -14,13 +14,13 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Learn Flutter'),
+        title: const Text('Learn Flutter'),
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back_ios)),
+            icon: const Icon(Icons.arrow_back_ios)),
         actions: [
           IconButton(
             onPressed: () {
