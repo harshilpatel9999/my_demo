@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_demo/home_page.dart';
+import 'package:my_demo/knock_off.dart';
+import 'package:my_demo/more_figma.dart';
+import 'package:my_demo/my_digest.dart';
 import 'package:my_demo/profile_page.dart';
 
 void main() {
@@ -27,8 +30,14 @@ class Rootpage extends StatefulWidget {
 }
 
 class _RootpageState extends State<Rootpage> {
-  int currentPage = 0;
-  List<Widget> pages = const [Homepage(), ProfilePage()];
+  int currentPage = 4;
+  List<Widget> pages = [
+    Homepage(),
+    ProfilePage(),
+    MyDigestPage(),
+    KnockOffPage(),
+    MoreFigmaPage()
+  ];
 
 //  set currentPage(dynamic value) {}
 
@@ -47,7 +56,11 @@ class _RootpageState extends State<Rootpage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Person'),
-          NavigationDestination(icon: Icon(Icons.people), label: 'People'),
+          NavigationDestination(icon: Icon(Icons.diamond), label: 'My Digest'),
+          NavigationDestination(
+              icon: Icon(Icons.thunderstorm), label: 'Knockoff'),
+          NavigationDestination(
+              icon: Icon(Icons.more_horiz_rounded), label: 'More'),
         ],
         onDestinationSelected: (int index) {
           setState(() {
