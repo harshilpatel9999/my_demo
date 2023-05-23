@@ -1,92 +1,90 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/more_figma.dart';
 
 void main() {
   runApp(MoreFigmaPage());
 }
 
 class MoreFigmaPage extends StatelessWidget {
-  const MoreFigmaPage({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyScrollablePage(),
-    );
-  }
-}
-
-class MyScrollablePage extends StatelessWidget {
-  const MyScrollablePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Scrollable Page'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            CustomBlock(
-              icon: Icons.home,
-              text: 'Home Block',
-            ),
-            CustomBlock(
-              icon: Icons.folder,
-              text: 'Files Block',
-            ),
-            CustomBlock(
-              icon: Icons.person,
-              text: 'Profile Block',
-            ),
-            CustomBlock(
-              icon: Icons.shopping_cart,
-              text: 'Cart Block',
-            ),
-            CustomBlock(
-              icon: Icons.settings,
-              text: 'Settings Block',
-            ),
-          ],
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Back',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'My Digest',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // Add your desired action here
-        },
-        backgroundColor: Colors.orange,
-        child: const Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-    );
-  }
-}
-
-class CustomBlock extends StatelessWidget {
-  final IconData icon;
-  final String text;
-
-  const CustomBlock({Key? key, required this.icon, required this.text})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: double.infinity,
-      margin: const EdgeInsets.all(10),
-      color: Colors.grey[300],
-      child: Row(
-        children: [
-          Container(
-            margin: const EdgeInsets.all(10),
-            child: Icon(icon),
+        body: SingleChildScrollView(
+          padding: EdgeInsets.all(10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundColor: Colors.black,
+                // Replace the `imageUrl` with your actual profile picture.
+                // backgroundImage: NetworkImage(imageUrl),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'Harshil Patel',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                'My Profile',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  // Add your logic here for the Premium button.
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Colors.orange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  elevation: 2,
+                  minimumSize: Size(150, 50),
+                ),
+                child: Text(
+                  'Premium',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
           ),
-          Text(
-            text,
-            style: const TextStyle(fontSize: 20),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -32,10 +32,10 @@ class Rootpage extends StatefulWidget {
 class _RootpageState extends State<Rootpage> {
   int currentPage = 4;
   List<Widget> pages = [
-    Homepage(),
-    ProfilePage(),
-    MyDigestPage(),
-    KnockOffPage(),
+    const Homepage(),
+    const ProfilePage(),
+    const MyDigestPage(),
+    const KnockOffPage(),
     MoreFigmaPage()
   ];
 
