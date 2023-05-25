@@ -10,10 +10,20 @@ class MoreFigmaPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Text('Back'),
+    return MaterialApp(
+        home: Scaffold(
+      body: Row(
+        children: [
+          const Text('Back'),
+          const Text('My Digest'),
+          ElevatedButton(
+            onPressed: () {
+              print('Answer choosen');
+            },
+            child: const Text('Premium'),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }
