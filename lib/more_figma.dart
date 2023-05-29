@@ -5,22 +5,52 @@ void main() {
   runApp(const MoreFigmaPage());
 }
 
-class MoreFigmaPage extends StatelessWidget {
+class MoreFigmaPage extends StatefulWidget {
   const MoreFigmaPage({super.key});
 
   @override
+  State<MoreFigmaPage> createState() => _MoreFigmaPageState();
+}
+
+class _MoreFigmaPageState extends State<MoreFigmaPage> {
+  var questionIndex = 0;
+
+  void answerQuestion() {
+    setState(() {
+      questionIndex = questionIndex + 1;
+    });
+    print(questionIndex);
+  }
+
+  @override
   Widget build(BuildContext context) {
+    var questions = [
+      'What\'s your favorite colour?',
+      'what\'s your favriout animal?'
+    ];
     return MaterialApp(
         home: Scaffold(
-      body: Row(
+      // appBar: AppBar(
+      //   title: Text('More Figma'),
+      // ),
+      body: Column(
         children: [
-          const Text('Back'),
-          const Text('My Digest'),
+          Text(questions[questionIndex]),
+          ElevatedButton(
+            onPressed: answerQuestion,
+            child: const Text('Answer 1'),
+          ),
           ElevatedButton(
             onPressed: () {
-              print('Answer choosen');
+              print(answerQuestion);
             },
-            child: const Text('Premium'),
+            child: const Text('Answer 2'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              print(answerQuestion);
+            },
+            child: const Text('Answer 3'),
           ),
         ],
       ),

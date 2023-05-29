@@ -36,7 +36,7 @@ class _RootpageState extends State<Rootpage> {
     const ProfilePage(),
     const MyDigestPage(),
     const KnockOffPage(),
-    const MoreFigmaPage()
+    const MoreFigmaPage(),
   ];
 
 //  set currentPage(dynamic value) {}
