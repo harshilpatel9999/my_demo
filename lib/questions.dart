@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import './more_figma.dart ';
+import './questions.dart';
 
 class QuestionPage extends StatelessWidget {
   // QuestionPage({super.key});
 
-  String questionText;
+  final String questionText;
 
   QuestionPage(this.questionText, {super.key});
 
@@ -12,10 +12,10 @@ class QuestionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: EdgeInsets.all(11),
+      margin: const EdgeInsets.all(10),
       child: Text(
         questionText,
-        style: const TextStyle(fontSize: 20),
+        style: const TextStyle(fontSize: 28),
         textAlign: TextAlign.center,
       ),
     );

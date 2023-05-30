@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_demo/questions.dart';
 // import 'package:my_demo/more_figma.dart';
 
 void main() {
@@ -35,7 +36,7 @@ class _MoreFigmaPageState extends State<MoreFigmaPage> {
       // ),
       body: Column(
         children: [
-          Text(questions[questionIndex]),
+          QuestionPage(questions[questionIndex]),
           ElevatedButton(
             onPressed: answerQuestion,
             child: const Text('Answer 1'),
