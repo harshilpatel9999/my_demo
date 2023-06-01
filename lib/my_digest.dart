@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,7 +21,7 @@ class MyDigestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: null, // Remove the app bar from the previous screen
+      // Remove the app bar from the previous screen
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class MyDigestPage extends StatelessWidget {
                   crossAxisCount: 2,
                   crossAxisSpacing: 8,
                   mainAxisSpacing: 8,
-                  children: [
+                  children: const [
                     IconTextWidget(
                       icon: Icons.home,
                       text: 'Home',
@@ -157,7 +157,7 @@ class IconTextWidget extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  IconTextWidget({
+  const IconTextWidget({
     super.key,
     required this.icon,
     required this.text,

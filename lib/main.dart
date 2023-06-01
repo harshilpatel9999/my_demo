@@ -56,7 +56,13 @@ class _RootpageState extends State<Rootpage> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Person'),
-          NavigationDestination(icon: Icon(Icons.diamond), label: 'My Digest'),
+          NavigationDestination(
+            icon: Icon(
+              Icons.diamond,
+              color: Colors.orange,
+            ),
+            label: ('My Digest'),
+          ),
           NavigationDestination(
               icon: Icon(Icons.thunderstorm), label: 'Knockoff'),
           NavigationDestination(
