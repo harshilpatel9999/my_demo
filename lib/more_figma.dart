@@ -34,26 +34,30 @@ class _MoreFigmaPageState extends State<MoreFigmaPage> {
       // appBar: AppBar(
       //   title: Text('More Figma'),
       // ),
-      body: Column(
-        children: [
-          QuestionPage(questions[questionIndex]),
-          ElevatedButton(
-            onPressed: answerQuestion,
-            child: const Text('Answer 1'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              print(answerQuestion);
-            },
-            child: const Text('Answer 2'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              print(answerQuestion);
-            },
-            child: const Text('Answer 3'),
-          ),
-        ],
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height / 3,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            QuestionPage(questions[questionIndex]),
+            ElevatedButton(
+              onPressed: answerQuestion,
+              child: const Text('Answer 1'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(answerQuestion);
+              },
+              child: const Text('Answer 2'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print(answerQuestion);
+              },
+              child: const Text('Answer 3'),
+            ),
+          ],
+        ),
       ),
     ));
   }

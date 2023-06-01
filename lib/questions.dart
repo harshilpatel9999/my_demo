@@ -6,7 +6,7 @@ class QuestionPage extends StatelessWidget {
 
   final String questionText;
 
-  QuestionPage(this.questionText, {super.key});
+  const QuestionPage(this.questionText, {super.key});
 
   @override
   Widget build(BuildContext context) {
