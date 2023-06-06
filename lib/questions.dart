@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './questions.dart';
 
 class QuestionPage extends StatelessWidget {
   // QuestionPage({super.key});
