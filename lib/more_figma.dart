@@ -33,7 +33,7 @@ class _MoreFigmaPageState extends State<MoreFigmaPage> {
         home: Scaffold(
       // appBar: AppBar(
       //   title: Text('More Figma'),
-      // ),
+      // ),+
       body: SizedBox(
         height: MediaQuery.of(context).size.height / 3,
         child: Column(
